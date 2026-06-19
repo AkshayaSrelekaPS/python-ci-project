@@ -1,0 +1,12 @@
+name: "TODO Checker"
+
+description: "Find TODO and FIXME comments in Python files"
+
+runs:
+  using: "composite"
+
+  steps:
+    - name: Run TODO checker
+      shell: bash
+      run: |
+        python .github/actions/todo-checker/check_todo.py
